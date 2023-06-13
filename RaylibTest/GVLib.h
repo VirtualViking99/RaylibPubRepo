@@ -15,16 +15,19 @@ namespace GVLib {
 		float movespeed = 3.0f;
 	};
 
+	bool IsAtBounds_H = false;
+	bool IsAtBounds_V = false;
 
-}
-namespace MapTransition{
-	int hPos;
-	int vPos;
 
-	void TransportPosition(int hPosition,int vPosition)
+	float Clamp(float value, float min, float max)
 	{
-		hPos = hPosition;
-		vPos = vPosition;
-		Vector2 TransPos = { hPosition, vPosition };
+		if (value < min)
+			return min;
+		if (value > max)
+			return max;
+		return value;
 	}
+
+
 }
+
