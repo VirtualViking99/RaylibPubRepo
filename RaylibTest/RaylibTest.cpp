@@ -33,8 +33,9 @@ int main(void)
     Vector2 CharPos{ screenWidth / 2, screenHeight / 2 };
     const float Char_radius = 10;
 
-    //Load the texture of the map and scale to the dimensions of the screen
-    Texture2D forestMap = LoadTexture("Forestmap.png");
+    //Load the texture of the map and scale to the dimensions of the screen     // Note you have to put the texture in the same folder as your debug executable
+                                                                                // because you can't load textures from Visual studio debugger (for some reason)
+    Texture2D forestMap = LoadTexture("Insert your texture file here.png");
     Vector2 texturePosition = { 0, 0 };
     float textureScaleX = (float)screenWidth / forestMap.width;
     float textureScaleY = (float)screenHeight / forestMap.height;
